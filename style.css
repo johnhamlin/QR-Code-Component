@@ -2,15 +2,45 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Outfit, sans-serif;
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Outfit, sans-serif;
+  background-color: hsl(212, 45%, 89%);
+}
+
+.card,
+.qr-code {
+  border-radius: 20px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  align-items: center;
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  padding: 18px;
+  background-color: white;
+  /* margin: auto auto; */
   width: 325px;
   height: 500px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
 }
 
 .qr-code {
@@ -18,12 +48,28 @@ body {
   height: 285px;
 }
 
+.card-title,
 .card-text {
+  text-align: center;
+  width: 95%;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 22px;
+  margin: 30px 0 25px 0;
+}
+.card-text {
+  font-weight: 400;
+  font-size: 15px;
 }
 /* Default style for Frontend Mentors */
 /* Feel free to remove these styles or customise in your own stylesheet 👍  */
 
 .attribution {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 5px;
   font-size: 11px;
   text-align: center;
 }
